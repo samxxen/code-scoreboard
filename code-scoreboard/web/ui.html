@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./reset.css"/>
+  <link rel="stylesheet" href="./style.css"/>
+  <title>codescript</title>
+</head>
+<body>
+<div class="container" id="noselect">
+  <aside class="sb-panel" aria-live="polite">
+
+    <header class="sb-header">
+      <div class="sb-title">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Server Statistics</span>
+      </div>
+      <div id="police-status" class="status-badge status-low">
+        <span class="status-dot"></span>
+        <span id="status-label">Low Police</span>
+      </div>
+    </header>
+
+    <div class="stat-grid">
+      <div class="stat-box sb-players">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-val" id="total-players">0/0</div>
+        </div>
+        <div class="stat-lbl">PLAYERS</div>
+      </div>
+      <div class="stat-box sb-time">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-regular fa-clock"></i></div>
+          <div class="stat-val" id="total-time">0H:00M</div>
+        </div>
+        <div class="stat-lbl">PLAYTIME</div>
+      </div>
+      <div class="stat-box sb-cops">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="stat-val" id="total-cops">0</div>
+        </div>
+        <div class="stat-lbl">POLICE</div>
+      </div>
+      <div class="stat-box sb-ems">
+        <div class="stat-row">
+          <div class="stat-icon"><i class="fa-solid fa-truck-medical"></i></div>
+          <div class="stat-val" id="total-ambulance">0</div>
+        </div>
+        <div class="stat-lbl">EMS</div>
+      </div>
+    </div>
+
+    <div class="ca-header">
+      <div class="ca-title">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Criminal Activities</span>
+      </div>
+      <div class="ca-badges">
+        <span class="ca-chip cops"><i class="fa-solid fa-shield"></i> <b id="ca-cops">0</b> Cops</span>
+        <span class="ca-chip ems"><i class="fa-solid fa-truck-medical"></i> <b id="ca-ems">0</b> EMS</span>
+      </div>
+    </div>
+
+    <div class="activities-scroll">
+      <div id="activity-list"></div>
+    </div>
+
+  </aside>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
