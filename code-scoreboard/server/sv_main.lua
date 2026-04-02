@@ -1,6 +1,3 @@
-
-
-
 local QBCore = exports['qb-core']:GetCoreObject()
 
 QBCore.Functions.CreateCallback('qb-scoreboard:server:GetScoreboardData', function(_, cb)
