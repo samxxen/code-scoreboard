@@ -11,10 +11,8 @@ local function GetTime()
 end
 
 
--- Functions
 
 function DrawText3DID(x,y,z, text, textColor)
-    -- افتراضي نفس أحمر السكوربورد
     local color = { r = 204, g = 25, b = 51, alpha = 255 }
     if textColor ~= nil then 
         color = {
@@ -97,13 +95,11 @@ local function GetPlayersFromCoords(coords, distance)
     return closePlayers
 end
 
--- Events
 
 RegisterNetEvent('qb-scoreboard:client:SetActivityBusy', function(activity, busy)
     Config.IllegalActions[activity].busy = busy
 end)
 
--- Command
 
 if Config.Toggle then
     RegisterCommand('scoreboard', function()
@@ -164,7 +160,6 @@ else
     RegisterKeyMapping('+scoreboard', 'Open Scoreboard', 'keyboard', Config.OpenKey)
 end
 
--- Threads
 
 Citizen.CreateThread(function()
     while true do
@@ -198,7 +193,7 @@ CreateThread(function()
 
     SendNUIMessage({
         action = "setup",
-        items = actionsSorted -- ⚠️ ARRAY
+        items = actionsSorted 
     })
 end)
 
